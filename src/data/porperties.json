@@ -1,0 +1,38 @@
+[
+  {
+    "Id":1,
+    "Name": "Bly Mannor",
+    "Type": "Mannor",
+    "Price":18000
+  },
+  {
+    "Id":2,
+    "Name": "Hill House",
+    "Type": "House",
+    "Price":14000
+  },
+  {
+    "Id":3,
+    "Name": "Kehoe House,",
+    "Type": "Brick Mansion",
+    "Price":23000
+  },
+  {
+    "Id":4,
+    "Name": "Hay House",
+    "Type": "Villa",
+    "Price":26000
+  },
+  {
+    "Id":5,
+    "Name": "Ennis House",
+    "Type": "House",
+    "Price":11000
+  },
+  {
+    "Id":6,
+    "Name": "Ancient Ram Inn",
+    "Type": "Inn",
+    "Price": 11000
+  }
+]

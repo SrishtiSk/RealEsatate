@@ -1,38 +1,60 @@
 [
   {
     "Id":1,
+    "SellRent":1,
     "Name": "Bly Mannor",
     "Type": "Mannor",
-    "Price":18000
+    "Price":18000,
+    "Image": "propertyimg1"
   },
   {
     "Id":2,
+    "SellRent":1,
     "Name": "Hill House",
     "Type": "House",
-    "Price":14000
+    "Price":14000,
+    "Image": "propertyimg2"
+
   },
   {
     "Id":3,
-    "Name": "Kehoe House,",
+    "SellRent":2,
+    "Name": "Kehoe House",
     "Type": "Brick Mansion",
-    "Price":23000
+    "Price":23000,
+    "Image": "propertyimg3"
+
   },
   {
     "Id":4,
+    "SellRent":1,
     "Name": "Hay House",
     "Type": "Villa",
-    "Price":26000
+    "Price":26000,
+    "Image": "propertyimg4"
   },
   {
     "Id":5,
+    "SellRent":2,
     "Name": "Ennis House",
     "Type": "House",
-    "Price":11000
+    "Price":11000,
+    "Image": "propertyimg5"
   },
   {
     "Id":6,
+    "SellRent":1,
     "Name": "Ancient Ram Inn",
     "Type": "Inn",
-    "Price": 11000
+    "Price": 11000,
+    "Image":""
+  },
+  {
+    "Id":7,
+    "SellRent":2,
+    "Name": "Amityville House",
+    "Type": "villa",
+    "Price": 26000,
+    "Image":""
   }
 ]

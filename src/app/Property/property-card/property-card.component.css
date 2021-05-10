@@ -1,3 +1,7 @@
+.card{
+  min-height: 400px;
+}
+
 .card-image-wrapper{
   overflow: hidden;
   position: relative;

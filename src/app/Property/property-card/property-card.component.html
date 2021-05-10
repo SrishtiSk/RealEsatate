@@ -4,7 +4,7 @@
     <img class="card-img-top" *ngIf="!propertycard.Image" src="\assets\Images\Default_House1.png">
     <img class="card-img-top" *ngIf="propertycard.Image" src="\assets\Images\{{propertycard.Image}}.jpg">
 
-    <ul class="list-inline text-center member-icons animate">
+    <ul *ngIf="!hideIcons" class="list-inline text-center member-icons animate">
       <li class="list-inline-item">
         <button class="btn btn-primary" routerLink="/property-detail/{{propertycard.Id}}"><i class="far fa-edit"></i></button>
       </li>

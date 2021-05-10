@@ -9,6 +9,7 @@ import { IProperty } from '../IProperty.interface';
 export class PropertyCardComponent implements OnInit {
 
 @Input() propertycard : IProperty
+@Input() hideIcons: boolean;
 
   constructor() { }
 

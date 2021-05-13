@@ -47,7 +47,7 @@ const appRoutes: Routes = [
     AddPropertyComponent,
     PropertyDetailComponent,
     UserLoginComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
   ],
   imports: [
     BrowserModule,

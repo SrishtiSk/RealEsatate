@@ -55,7 +55,7 @@
     "PostedOn":"01-Jan-2019"
   },
   {
-    "Id":1,
+    "Id":3,
     "SellRent":1,
     "Name":"Gun Hill",
     "PType":"House",
@@ -136,7 +136,6 @@
     "Posession":"Ready to move",
     "PostedOn":"01-Jan-2019"
   },
-
   {
     "Id":6,
     "SellRent":1,

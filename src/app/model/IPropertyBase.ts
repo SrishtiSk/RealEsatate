@@ -10,5 +10,4 @@ export interface IPropertyBase{
   City: string;
   RTM: number; //ready to move
   Image?: string;
-
 }

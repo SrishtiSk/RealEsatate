@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
 import { IPropertyBase } from 'src/app/model/IPropertyBase';
@@ -83,7 +83,7 @@ export class AddPropertyComponent implements OnInit {
         PossessionOn: [null],
         AOP: [null], //Age of Property
         Gated: [null],
-        Maintenance: [null],
+        MainEntrance: [null],
         Description: [null]
       })
 
@@ -187,7 +187,7 @@ export class AddPropertyComponent implements OnInit {
   }
 
   get MainEntrance() {
-    return this.OtherInfo.controls.MainEntrance as FormControl;
+   return this.OtherInfo.controls.MainEntrance as FormControl;
   }
 
   get Description() {
@@ -204,8 +204,9 @@ export class AddPropertyComponent implements OnInit {
     this.NextClicked = true;
     if(this.allTabsValid()){
       this.mapProperty();
+
       this.housingService.addProperty(this.property);
-      this.alertify.success("Congratulations, Your property listed successfully on our website!");
+      this.alertify.success("Congratulations, Your Property listed successfully on our website!");
       console.log(this.addPropertyForm);
 
       if(this.SellRent.value === '2'){
@@ -219,8 +220,9 @@ export class AddPropertyComponent implements OnInit {
     }
   }
 
-  mapProperty():void{
-    this.property.SellRent = +this.SellRent.value; //'+' converts string to number
+  mapProperty(): void{
+    this.property.Id = +this.housingService.newPropId();
+    this.property.SellRent = +this.SellRent.value; //'+' converts  to number
     this.property.BHK = this.BHK.value;
     this.property.PType = this.PType.value;
     this.property.Name = this.Name.value;
@@ -261,7 +263,6 @@ export class AddPropertyComponent implements OnInit {
       this.formTabs.tabs[3].active = true;
       return false;
     }
-
     return true;
   }
 

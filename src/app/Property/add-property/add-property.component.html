@@ -88,19 +88,21 @@
               <input type="text" class="form-control" formControlName="Price" [(ngModel)]="propertyView.Price">
               <div class="error-block" *ngIf="Price.invalid && (NextClicked || Price.touched)">
                 Please Select
-                <span *ngIf="SellRent.value==1; else ShowRent"> price</span>
+                <span *ngIf="SellRent.value==1;else ShowRent"> price</span>
                 <ng-template #ShowRent> rent</ng-template>
               </div>
             </div>
 
-            <div class="form-group col-12">
-              <label>Security (in USD)</label>
-              <input type="text" class="form-control" formControlName="Security">
-            </div>
+            <div *ngIf="SellRent.value==2">
+              <div class="form-group col-12" >
+                <label>Security (in USD)</label>
+                <input type="text" class="form-control" formControlName="Security">
+              </div>
 
-            <div class="form-group col-12">
-              <label>Maintenance (in USD)</label>
-              <input type="text" class="form-control" formControlName="Maintenance">
+              <div class="form-group col-12">
+                <label>Maintenance (in USD)</label>
+                <input type="text" class="form-control" formControlName="Maintenance">
+              </div>
             </div>
 
             <div class="form-group col-12">
@@ -196,15 +198,15 @@
 
             <div class="form-group col-12">
               <p>Main Entrance</p>
-              <div class="btn-group" btnRadioGroup formControlName="Maintenance">
+              <div class="btn-group" btnRadioGroup formControlName="MainEntrance">
                 <label class="btn btn-outline-primary mr-2"
-                btnRadio=1 tabindex="0" role="button" name="Entrance">East</label>
+                btnRadio=1 tabindex="0" role="button" name="MainEntrance">East</label>
                 <label class="btn btn-outline-primary mr-2"
-                btnRadio=2 tabindex="0" role="button" name="Entrance">West</label>
+                btnRadio=2 tabindex="0" role="button" name="MainEntrance">West</label>
                 <label class="btn btn-outline-primary mr-2"
-                btnRadio=3 tabindex="0" role="button" name="Entrance">South</label>
+                btnRadio=3 tabindex="0" role="button" name="MainEntrance">South</label>
                 <label class="btn btn-outline-primary mr-2"
-                btnRadio=4 tabindex="0" role="button" name="Entrance">North</label>
+                btnRadio=4 tabindex="0" role="button" name="MainEntrance">North</label>
               </div>
             </div>
 
@@ -255,6 +257,9 @@
     </div>
     <div class="shadow-lg p-3 bg-white">
       <app-property-card [propertycard]="propertyView" hideIcons="true"></app-property-card>
+      <span *ngIf="SellRent.value==1; else ShowRent">FOR: SEll</span>
+      <ng-template #ShowRent>For: RENT</ng-template>
     </div>
+
   </div>
 </div>

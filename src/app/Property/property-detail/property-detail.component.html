@@ -1,15 +1,111 @@
-<p>
-  selected property id is {{propertyId}}
+<div class="row shadow">
+  <div class="col-sm-4 p-0">
 
-  <br/><br/>
-  <button class="btn btn-primary" (click)="onSelectNext()">Select Next page</button>
+    <div class="card">
+      <div class=".card-image-wrapper">
+        <img class="card-img-top" *ngIf="property.Image" src="assets\Images\{{property.Image}}.jpg">
+        <img class="card-img-top" *ngIf="!property.Image" src="assets\Images\Default_House1.png">
+      </div>
+      <div class="card-body">
+        <h1 class="card-title">{{property.Name}}</h1>
+        <div><strong>{{property.BHK}} BHK {{property.PType}} @ ${{property.Price}}</strong></div>
+        <div><strong>in {{property.City}}</strong><br/></div>
+        <hr/>
+        <div><strong>Build Area: </strong> {{property.BuiltArea}} Sqft</div>
+        <div><strong>Carpeet Area: </strong> {{property.CarpetArea}} Sqft</div>
+        <div><strong>Furnish Type: </strong> {{property.FType}}</div>
+      </div>
 
-  <br/><br/>
-  <button class="btn btn-primary" routerLink="/property-detail/1">1</button>
-  <button class="btn btn-primary" routerLink="/property-detail/3">2</button>
-  <button class="btn btn-primary" routerLink="/property-detail/3">3</button>
-  <button class="btn btn-primary" [routerLink]="['/property-detail','4']">4</button>
+      <div class="card-footer">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary">Like</button>
+          <button class="btn btn-success">Message</button>
+        </div>
+      </div>
 
+    </div>
 
-</p>
+  </div>
 
+  <div class="col-sm-8 p-0">
+    <div class="tab-panel">
+      <tabset class="member-tabset">
+
+        <!-----------------  OVER VIEW TAB --------------- -->
+        <tab heading="Overview">
+          <div class="col-sm-12">
+            <h1>Overview</h1>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="heading">
+                  <strong>Project Name</strong><p>{{property.Name}}</p>
+                </div>
+                <div class="heading">
+                  <strong>Floor Number</strong><p>{{property.FloorNo}}</p>
+                </div>
+                <div class="heading">
+                  <strong>Age of Property</strong><p>{{property.AOP}}</p>
+                </div>
+                <div class="heading">
+                  <strong>Possession</strong><p>{{property.Possession}}</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="heading">
+                  <strong>Main Entrance</strong><p>{{property.MainEntrance}}</p>
+                </div>
+
+                <div class="heading">
+                  <strong>Gated Community</strong><p>{{property.Gated}}</p>
+                </div>
+
+                <div class="heading">
+                  <strong>Security Deposit</strong><p>{{property.Security}}</p>
+                </div>
+                <div class="heading">
+                  <strong>Maintenance</strong><p>{{property.Maintenance}}</p>
+                </div>
+              </div>
+
+              <div class="col-sm-12">
+                <div class="heading">
+                    <strong>About Property</strong>
+                    <p>{{property.Description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+
+        <!----------------- ADDRESS TAB --------------- -->
+        <tab heading="Address">
+          <div class="col-sm-12">
+            <h1>Address</h1>
+            <div class="heading">
+                <strong>{{property.Address}}</strong><br/>
+                <strong>{{property.Address2}}</strong><br/>
+                <strong>{{property.City}}</strong>
+            </div>
+          </div>
+        </tab>
+
+        <!-----------------  PHOTOS TAB --------------- -->
+        <tab heading="Photos">
+          <div class="col-sm-12">
+            <h1> Photots </h1>
+          </div>
+        </tab>
+
+        <!-----------------  CONTACT TAB --------------- -->
+        <tab heading="Contact">
+          <div class="col-sm-12">
+            <h1>Contact</h1>
+            This should be restricted area and only registered user should be able to see seller details!
+          </div>
+        </tab>
+      </tabset>
+
+    </div>
+  </div>
+</div>

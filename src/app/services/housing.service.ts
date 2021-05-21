@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { delay, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { Property } from '../model/property';
 import { IPropertyBase } from '../model/IPropertyBase';
@@ -14,18 +14,18 @@ export class HousingService {
   constructor(private http:HttpClient) { }
 
   getProperty(id:number){
-
     return this.getAllProperties().pipe(
       map(propertiesArray => {
+        //throw new Error('SomeError');
         return propertiesArray.find(p=>p.Id === id);
       })
     );
   }
 
-  getAllProperties(SellRent?:number): Observable<IPropertyBase[]>{
+  getAllProperties(SellRent?:number): Observable<Property[]>{
     return this.http.get('/data/porperties.json').pipe(
       map(data=>{
-        const propertiesArray : Array<IPropertyBase> = [];
+        const propertiesArray : Array<Property> = []; //IPropertyBase to Property[] when we add router resolver
 
         const localProperties = JSON.parse(localStorage.getItem('newProp'));
         if(localProperties){
@@ -53,7 +53,7 @@ export class HousingService {
       })
     );
 
-    return this.http.get<Iproperti[]>('/data/porperties.json');
+    return this.http.get<Property[]>('/data/porperties.json');
   }
 
   addProperty(property: Property){

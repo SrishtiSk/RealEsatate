@@ -17,22 +17,27 @@ export class PropertyDetailComponent implements OnInit {
   public propertyId : number;
   property = new Property();
 
+
   ngOnInit(): void {
 
     this.propertyId = +this.route.snapshot.params['id']; //+ aacts like Number() explisit converter
-
-    //pagination
-    this.route.params.subscribe(
-      (params) =>{
-        this.propertyId = +params['id'];
-        this.housingService.getProperty(this.propertyId).subscribe(
-          (data: Property) => {
-            this.property = data;
-          }
-        );
-
+    this.route.data.subscribe(
+      (data:Property)=>{
+        this.property = data['prp']
       }
-    );
+    )
+    // //pagination
+    // this.route.params.subscribe(
+    //   (params) =>{
+    //     this.propertyId = +params['id'];
+    //     this.housingService.getProperty(this.propertyId).subscribe(
+    //       (data: Property) => {
+    //         this.property = data;
+    //       }
+    //     );
+
+    //   }
+    // );
   }
 
 

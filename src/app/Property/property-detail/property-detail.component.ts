@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgxGalleryImage, NgxGalleryOptions } from '@kolkov/ngx-gallery';
+import { NgxGalleryAnimation } from '@kolkov/ngx-gallery';
+
 import { Property } from 'src/app/model/property';
 import { HousingService } from 'src/app/services/housing.service';
 
@@ -17,6 +20,8 @@ export class PropertyDetailComponent implements OnInit {
   public propertyId : number;
   property = new Property();
 
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[];
 
   ngOnInit(): void {
 
@@ -38,6 +43,45 @@ export class PropertyDetailComponent implements OnInit {
 
     //   }
     // );
+
+    this.galleryOptions = [
+      {
+        width: '100%',
+        height: '500px',
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Slide
+      },
+      // max-width 800
+    ];
+
+    this.galleryImages = [
+      {
+        small: '/assets/Images/Interier-room.png',
+        medium: '/assets/Images/Interier-room.png',
+        big: '/assets/Images/Interier-room.png'
+      },
+      {
+        small: '/assets/Images/Interier-room2.png',
+        medium: '/assets/Images/Interier-room2.png',
+        big: '/assets/Images/Interier-room2.png'
+      },
+      {
+        small: '/assets/Images/Interier-kitchen.png',
+        medium: '/assets/Images/Interier-kitchen.png',
+        big: '/assets/Images/Interier-kitchen.png'
+      },
+      {
+        small: '/assets/Images/Interier-staircase.png',
+        medium: '/assets/Images/Interier-staircase.png',
+        big: '/assets/Images/Interier-staircase.png'
+      },
+      {
+        small: '/assets/Images/Interier-staircase2.png',
+        medium: '/assets/Images/Interier-staircase2.png',
+        big: '/assets/Images/Interier-staircase2.png'
+      },
+
+    ];
   }
 
 

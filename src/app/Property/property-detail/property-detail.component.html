@@ -28,7 +28,7 @@
   </div>
 
   <div class="col-sm-8 p-0">
-    <div class="tab-panel">
+    <div class="tab-panel p-3">
       <tabset class="member-tabset">
 
         <!-----------------  OVER VIEW TAB --------------- -->
@@ -93,7 +93,7 @@
         <!-----------------  PHOTOS TAB --------------- -->
         <tab heading="Photos">
           <div class="col-sm-12">
-            <h1> Photots </h1>
+            <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
           </div>
         </tab>
 

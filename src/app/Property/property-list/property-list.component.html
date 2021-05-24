@@ -1,5 +1,34 @@
+<!--// pipes:
+   Current Date (local)= {{Today |date:'medium' | uppercase}} <br/>
+Current Date (Manhaton)= {{Today |date:'medium' :'GMT-4' }} -->
+
 <div class="row">
-  <div *ngFor="let property of properties" class="col-sm-4">
+
+  <div class="col-sm-6">
+    <label>Filter City</label>
+    <input [(ngModel)]='City'/>
+    <button type="button" (click)="onCityFilter()">Search</button>
+    <button type="button" (click)="onCityFilterClear()">Clear</button>
+  </div>
+
+  <div class="col-sm-6">
+    <label>Sort by &nbsp;</label>
+    <select [(ngModel)] = "SortbyParam">
+      <option value="City">City</option>
+      <option value="Price">Price</option>
+    </select>
+
+    <button type="button" (click)= "onSortDirection()">
+      <i *ngIf="SortDirection === 'desc'" class="fas fa-sort-down"></i>
+      <i *ngIf="SortDirection === 'asc'" class="fas fa-sort-up"></i>
+    </button>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <div class="col-sm-4" *ngFor="let property of properties | filter:SearchCity: 'City' | sort:[SortbyParam, SortDirection]" >
     <div class="shadow p-3 mb-4">
       <app-property-card [propertycard]="property"></app-property-card>
     </div>

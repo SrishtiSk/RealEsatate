@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "realestate-singlepagewebsite"
+  },
+  "targets": {
+    "realestate-singlepagewebsite": {
+      "hosting": {
+        "RealEsatate": [
+          "realestate-singlepagewebsite"
+        ]
+      }
+    }
+  }
+}

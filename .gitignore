@@ -50,5 +50,5 @@ Thumbs.db
 
 
 # WebApi ignore Files
-/WebApi Code/bin
-/WebApi Code/obj
+WebApi*Code/bin/
+WebApi*Code/obj/

@@ -1,0 +1,20 @@
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\bin\Debug\netcoreapp3.1\RealEsatate WebApi.exe
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\bin\Debug\netcoreapp3.1\RealEsatate WebApi.deps.json
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\bin\Debug\netcoreapp3.1\RealEsatate WebApi.runtimeconfig.json
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\bin\Debug\netcoreapp3.1\RealEsatate WebApi.runtimeconfig.dev.json
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\bin\Debug\netcoreapp3.1\RealEsatate WebApi.dll
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\bin\Debug\netcoreapp3.1\RealEsatate WebApi.pdb
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.csprojAssemblyReference.cache
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.AssemblyInfoInputs.cache
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.AssemblyInfo.cs
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.csproj.CoreCompileInputs.cache
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\staticwebassets\RealEsatate WebApi.StaticWebAssets.Manifest.cache
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\staticwebassets\RealEsatate WebApi.StaticWebAssets.xml
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\scopedcss\bundle\RealEsatate WebApi.styles.css
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.RazorTargetAssemblyInfo.cache
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.dll
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.pdb
+D:\Work_Space\RealEstate SinglePageApp\RealEsatate WebApi\obj\Debug\netcoreapp3.1\RealEsatate WebApi.genruntimeconfig.cache

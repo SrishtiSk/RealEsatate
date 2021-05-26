@@ -1,0 +1,29 @@
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.csprojAssemblyReference.cache
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.AssemblyInfoInputs.cache
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.AssemblyInfo.cs
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.csproj.CoreCompileInputs.cache
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.MvcApplicationPartsAssemblyInfo.cs
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.MvcApplicationPartsAssemblyInfo.cache
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\appsettings.Development.json
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\appsettings.json
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\WebApi Code.exe
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\WebApi Code.deps.json
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\WebApi Code.runtimeconfig.json
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\WebApi Code.runtimeconfig.dev.json
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\WebApi Code.dll
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\ref\WebApi Code.dll
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\WebApi Code.pdb
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\Microsoft.OpenApi.dll
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\staticwebassets\WebApi Code.StaticWebAssets.Manifest.cache
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\staticwebassets\WebApi Code.StaticWebAssets.xml
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\scopedcss\bundle\WebApi Code.styles.css
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.RazorTargetAssemblyInfo.cache
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.csproj.CopyComplete
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.dll
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\ref\WebApi Code.dll
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.pdb
+D:\Work_Space\RealEstate SinglePageApp\WebApi Code\obj\Debug\net5.0\WebApi Code.genruntimeconfig.cache

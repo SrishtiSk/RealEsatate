@@ -92,6 +92,7 @@ export class AddPropertyComponent implements OnInit {
 
  //#region <getterMethods>
   //#region <FormGroups>
+
   get BasicInfo(){
     return this.addPropertyForm.controls.BasicInfo as FormGroup;
   }
@@ -195,6 +196,7 @@ export class AddPropertyComponent implements OnInit {
   }
     //#endregion
   //#endregion
+
 
   onBack(){
     this.router.navigate(['/']);

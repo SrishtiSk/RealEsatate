@@ -26,12 +26,15 @@ namespace WebApi_Code
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
+
+            services.AddCors();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi_Code", Version = "v1" });
             });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +50,9 @@ namespace WebApi_Code
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            
+            app.UseCors(m => m.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

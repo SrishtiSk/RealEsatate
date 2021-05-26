@@ -13,6 +13,10 @@ export class HousingService {
 
   constructor(private http:HttpClient) { }
 
+  getAllCities(): Observable<string[]>{
+    return this.http.get<string[]>('https://localhost:5001/api/city');
+  }
+
   getProperty(id:number){
     return this.getAllProperties().pipe(
       map(propertiesArray => {
@@ -78,5 +82,6 @@ export class HousingService {
       return 101;
     }
   }
+
 
 }

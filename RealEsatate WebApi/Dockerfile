@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["RealEsatate WebApi.csproj", ""]
-RUN dotnet restore "./RealEsatate WebApi.csproj"
+COPY ["RealEsatate_WebApi.csproj", ""]
+RUN dotnet restore "./RealEsatate_WebApi.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "RealEsatate WebApi.csproj" -c Release -o /app/build
+RUN dotnet build "RealEsatate_WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "RealEsatate WebApi.csproj" -c Release -o /app/publish
+RUN dotnet publish "RealEsatate_WebApi.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "RealEsatate WebApi.dll"]
+ENTRYPOINT ["dotnet", "RealEsatate_WebApi.dll"]

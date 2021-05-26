@@ -14,10 +14,11 @@ namespace WebApi_Code.Controllers
         {
         }
 
+        //GET /api/city
         [HttpGet("")]
-        public IEnumerable<string> GetString()
+        public IEnumerable<string> GetStrings()
         {
-            return new string[] {"Atlanta, New York, Canada, boston, Chicago"};
+            return new string[] {"Atlanta", "New York", "Canada", "boston", "Chicago"};
         }
 
         [HttpGet("{id}")]

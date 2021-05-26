@@ -1,0 +1,54 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# FrontEnd ignore Files
+
+# compiled output
+FronEnd/dist
+FrontEnd/tmp
+FrontEnd/out-tsc
+
+# Only exists if Bazel was run
+Front/bazel-out
+
+# dependencies
+FrontEnd/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+FrontEnd/.idea
+FrontEnd/.project
+FrontEnd/.classpath
+FrontEnd/.c9/
+FrontEnd/*.launch
+FrontEnd/.settings/
+FrontEnd/*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+FrontEnd/.sass-cache
+FrontEnd/connect.lock
+FrontEnd/coverage
+FrontEnd/libpeerconnection.log
+FrontEnd/npm-debug.log
+FrontEnd/yarn-error.log
+FrontEnd/testem.log
+FrontEnd/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+
+# WebApi ignore Files
+/WebApi Code/bin
+/WebApi Code/obj

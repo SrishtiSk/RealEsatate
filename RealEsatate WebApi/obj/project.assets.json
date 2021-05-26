@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Work_Space\\RealEstate SinglePageApp\\RealEsatate WebApi\\RealEsatate WebApi.csproj",
-      "projectName": "RealEsatate WebApi",
-      "projectPath": "D:\\Work_Space\\RealEstate SinglePageApp\\RealEsatate WebApi\\RealEsatate WebApi.csproj",
+      "projectUniqueName": "d:\\Work_Space\\RealEstate SinglePageApp\\RealEsatate\\RealEsatate WebApi\\RealEsatate_WebApi.csproj",
+      "projectName": "RealEsatate_WebApi",
+      "projectPath": "d:\\Work_Space\\RealEstate SinglePageApp\\RealEsatate\\RealEsatate WebApi\\RealEsatate_WebApi.csproj",
       "packagesPath": "C:\\Users\\Srishti\\.nuget\\packages\\",
-      "outputPath": "D:\\Work_Space\\RealEstate SinglePageApp\\RealEsatate WebApi\\obj\\",
+      "outputPath": "d:\\Work_Space\\RealEstate SinglePageApp\\RealEsatate\\RealEsatate WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Srishti\\AppData\\Roaming\\NuGet\\NuGet.Config",

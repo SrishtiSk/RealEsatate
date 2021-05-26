@@ -11,6 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore;
+
+using WebApi_Code.Data;
 
 namespace WebApi_Code
 {
@@ -26,6 +30,9 @@ namespace WebApi_Code
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DataContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultString")));
+
             services.AddControllers();
 
             services.AddCors();

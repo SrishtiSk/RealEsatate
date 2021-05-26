@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebApi_Code.Data;
 
 namespace WebApi_Code.Controllers
 {
@@ -10,15 +11,19 @@ namespace WebApi_Code.Controllers
     [ApiController]
     public class CityController : ControllerBase
     {
-        public CityController()
+        private readonly DataContext dc;
+
+        public CityController(DataContext dataContext)
         {
+            this.dc = dataContext;
         }
 
         //GET /api/city
         [HttpGet("")]
-        public IEnumerable<string> GetStrings()
+        public IActionResult GetCities()
         {
-            return new string[] {"Atlanta", "New York", "Canada", "boston", "Chicago"};
+            var cities =  dc.Cities.ToList();
+            return Ok(cities);
         }
 
         [HttpGet("{id}")]

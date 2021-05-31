@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApi_Code.Data;
+using WebApi_Code.Models;
 
 namespace WebApi_Code.Controllers
 {
@@ -19,17 +21,50 @@ namespace WebApi_Code.Controllers
         }
 
         //GET /api/city
-        [HttpGet("")]
-        public IActionResult GetCities()
+        [HttpGet]
+        public async Task<IActionResult> GetCities()
         {
-            var cities =  dc.Cities.ToList();
+            var cities = await dc.Cities.ToListAsync();
             return Ok(cities);
         }
 
         [HttpGet("{id}")]
-        public string Get(int id)
+        public string GetCities(int id)
         {
             return "Atlanta";
+        }
+
+        //POST /api/city/add?cityname=Miami
+        //POST /api/city/add/Los Angeles
+        [HttpPost("add")]
+        [HttpPost("add/{cityName}")]
+        public async Task<IActionResult> AddCity(string cityName)
+        {
+            City city = new City();
+            city.Name = cityName;
+            await dc.Cities.AddAsync(city);
+            await dc.SaveChangesAsync();
+            return Ok(city);
+        }
+
+        //POST /api/city/add/post
+        [HttpPost("post")]
+        public async Task<IActionResult> AddCity(City city)
+        {
+            await dc.Cities.AddAsync(city);
+            await dc.SaveChangesAsync();
+            return Ok(city);
+        }
+
+
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteCity(int id)
+        {
+            var city =await dc.Cities.FindAsync(id);
+            dc.Cities.Remove(city);
+            await dc.SaveChangesAsync();
+            return Ok(id);
+
         }
 
     }

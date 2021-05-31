@@ -54,9 +54,9 @@ export class AddPropertyComponent implements OnInit {
 
     this.CreateAddPropertyFrom();
     this.housingService.getAllCities().subscribe(data => {
-      console.log("List form api: "+ data);
+      //console.log("List form api: "+ data);
       this.cityList = data;
-      console.log("CityList: "+ this.cityList);
+      //console.log("CityList: "+ this.cityList);
 
     })
   }

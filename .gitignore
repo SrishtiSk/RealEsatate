@@ -51,6 +51,7 @@ Thumbs.db
 # RealEsatate WebApi ignore Files
 RealEsatate_WebApi/bin
 RealEsatate_WebApi/obj
+
 # WebApi ignore Files
 WebApi_Code/bin/
 WebApi_Code/obj/

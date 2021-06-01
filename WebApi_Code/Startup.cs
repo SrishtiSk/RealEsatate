@@ -15,6 +15,8 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
 
 using WebApi_Code.Data;
+using WebApi_Code.Data.Repo;
+
 
 namespace WebApi_Code
 {
@@ -37,6 +39,8 @@ namespace WebApi_Code
 
             services.AddCors();
 
+            services.AddScoped<ICityRepository, CityRepository>();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi_Code", Version = "v1" });

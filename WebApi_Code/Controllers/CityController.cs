@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 //using Microsoft.EntityFrameworkCore;
 //using WebApi_Code.Data;
-using WebApi_Code.Data.Repo;
+using WebApi_Code.Interfaces;
 using WebApi_Code.Models;
 
 namespace WebApi_Code.Controllers
@@ -12,12 +12,16 @@ namespace WebApi_Code.Controllers
     public class CityController : ControllerBase
     {
        // private readonly DataContext dc;
-        private readonly ICityRepository repo;
+       // private readonly ICityRepository repo;
+
+        public IUnitOfWork Uow { get; }
 
         //public CityController(DataContext dataContext, ICityRepository repo)
-        public CityController(ICityRepository repo)
+        //public CityController(ICityRepository repo)
+        public CityController(IUnitOfWork uow)
         {
-            this.repo = repo;
+           // this.repo = repo;
+            Uow = uow;
             //this.dc = dataContext;
         }
 
@@ -26,7 +30,8 @@ namespace WebApi_Code.Controllers
         public async Task<IActionResult> GetCities()
         {
             //var cities = await dc.Cities.ToListAsync();
-            var cities = await repo.GetCitiesAsync();
+           // var cities = await repo.GetCitiesAsync();
+            var cities = await Uow._iCityRepository.GetCitiesAsync();
             return Ok(cities);
         }
 
@@ -58,10 +63,13 @@ namespace WebApi_Code.Controllers
             // await dc.SaveChangesAsync();
             // return Ok(city);
 
-            repo.AddCity(city);
-            await repo.SaveAsync();
-            return StatusCode(201);
+            // repo.AddCity(city);
+            // await repo.SaveAsync();
+            // return StatusCode(201);
             
+            Uow._iCityRepository.AddCity(city);
+            await Uow.SaveAsync();
+            return StatusCode(201);
         }
 
 
@@ -72,8 +80,12 @@ namespace WebApi_Code.Controllers
             // dc.Cities.Remove(city);
             // await dc.SaveChangesAsync();
 
-            repo.DeleteCity(id);
-            await repo.SaveAsync();
+            // repo.DeleteCity(id);
+            // await repo.SaveAsync();
+            // return Ok(id);
+
+            Uow._iCityRepository.DeleteCity(id);
+            await Uow.SaveAsync();
             return Ok(id);
 
         }

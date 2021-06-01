@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using WebApi_Code.Models;
 using Microsoft.EntityFrameworkCore;
+using WebApi_Code.Interfaces;
 
 namespace WebApi_Code.Data.Repo
 {
@@ -28,9 +29,9 @@ namespace WebApi_Code.Data.Repo
             return await dc.Cities.ToListAsync();
         }
 
-        public async Task<bool> SaveAsync()
-        {
-            return await dc.SaveChangesAsync() > 0;
-        }
+        // public async Task<bool> SaveAsync()
+        // {
+        //     return await dc.SaveChangesAsync() > 0;
+        // }
     }
 }

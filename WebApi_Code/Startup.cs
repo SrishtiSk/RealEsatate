@@ -1,21 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+//using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
 
 using WebApi_Code.Data;
-using WebApi_Code.Data.Repo;
+using WebApi_Code.Interfaces;
+
 
 
 namespace WebApi_Code
@@ -39,7 +33,7 @@ namespace WebApi_Code
 
             services.AddCors();
 
-            services.AddScoped<ICityRepository, CityRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             
             services.AddSwaggerGen(c =>
             {

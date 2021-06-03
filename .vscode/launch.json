@@ -10,9 +10,11 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/RealEsatate WebApi/bin/Debug/netcoreapp3.1/RealEsatate_WebApi.dll",
+            // "program": "${workspaceFolder}/RealEsatate_WebApi/bin/Debug/netcoreapp3.1/RealEsatate_WebApi.dll",
+            
+            "program": "${workspaceFolder}/WebApi_Code/bin/Debug/net5.0/WebApi_Code.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/RealEsatate WebApi",
+            "cwd": "${workspaceFolder}/WebApi_Code",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

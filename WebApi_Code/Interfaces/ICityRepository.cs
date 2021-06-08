@@ -10,5 +10,6 @@ namespace WebApi_Code.Interfaces
         void AddCity(City city);
         void DeleteCity(int CityId);
         // Task<bool> SaveAsync();
+        Task<City> FindCity(int CityId);
     }
 }

@@ -6,9 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
-
+using AutoMapper;
 using WebApi_Code.Data;
 using WebApi_Code.Interfaces;
+using WebApi_Code.Helper;
 
 
 
@@ -29,12 +30,11 @@ namespace WebApi_Code
             services.AddDbContext<DataContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultString")));
 
-            services.AddControllers();
-
+            services.AddControllers().AddNewtonsoftJson();
             services.AddCors();
-
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi_Code", Version = "v1" });

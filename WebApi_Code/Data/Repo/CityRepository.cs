@@ -14,6 +14,10 @@ namespace WebApi_Code.Data.Repo
         {
             this.dc = dc;
         }
+        public async Task<IEnumerable<City>> GetCitiesAsync()
+        {
+            return await dc.Cities.ToListAsync();
+        }
 
         public void AddCity(City city)
         {
@@ -24,14 +28,15 @@ namespace WebApi_Code.Data.Repo
             var city = dc.Cities.Find(CityId);
             dc.Cities.Remove(city);
         }
-        public async Task<IEnumerable<City>> GetCitiesAsync()
-        {
-            return await dc.Cities.ToListAsync();
-        }
 
         // public async Task<bool> SaveAsync()
         // {
         //     return await dc.SaveChangesAsync() > 0;
         // }
+
+        public async Task<City> FindCity(int cityId)
+        {
+            return await dc.Cities.FindAsync(cityId);
+        }
     }
 }

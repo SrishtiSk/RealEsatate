@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                //"${workspaceFolder}/RealEsatate_WebApi/RealEsatate_WebApi.csproj",
+                "${workspaceFolder}/WebApi_Code/WebApi_Code.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                //"${workspaceFolder}/RealEsatate_WebApi/RealEsatate_WebApi.csproj",
+                "${workspaceFolder}/WebApi_Code/WebApi_Code.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                //"${workspaceFolder}/RealEsatate_WebApi/RealEsatate_WebApi.csproj",
+                "${workspaceFolder}/WebApi_Code/WebApi_Code.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

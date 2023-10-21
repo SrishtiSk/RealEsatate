@@ -48,7 +48,11 @@ FrontEnd/typings
 .DS_Store
 Thumbs.db
 
+# RealEsatate WebApi ignore Files
+RealEsatate_WebApi/bin
+RealEsatate_WebApi/obj
 
 # WebApi ignore Files
-/WebApi Code/bin
-/WebApi Code/obj
+WebApi_Code/bin/
+WebApi_Code/obj/
+WebApi/obj/Debug/

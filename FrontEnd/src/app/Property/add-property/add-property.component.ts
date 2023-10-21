@@ -26,6 +26,7 @@ export class AddPropertyComponent implements OnInit {
   //will come from master DB
   propertyType: Array<string>=['House', 'Apartment', 'Duplex'];
   furnishType: Array<string>=['Fully', 'Semi', 'Unfurnished'];
+  cityList: any[];
 
   propertyView: IPropertyBase = {
     Id: null,
@@ -36,7 +37,7 @@ export class AddPropertyComponent implements OnInit {
     FType: null,
     BHK :null,
     BuiltArea: null,
-    City: null,
+    City: '',
     RTM: null
   };
 
@@ -52,7 +53,12 @@ export class AddPropertyComponent implements OnInit {
   //   });
 
     this.CreateAddPropertyFrom();
+    this.housingService.getAllCities().subscribe(data => {
+      //console.log("List form api: "+ data);
+      this.cityList = data;
+      //console.log("CityList: "+ this.cityList);
 
+    })
   }
 
   CreateAddPropertyFrom(){

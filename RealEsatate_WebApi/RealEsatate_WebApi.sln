@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEsatate_WebApi", "RealEsatate_WebApi.csproj", "{7518B34F-E3B8-42A4-8790-2FA9F78070D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7518B34F-E3B8-42A4-8790-2FA9F78070D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7518B34F-E3B8-42A4-8790-2FA9F78070D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7518B34F-E3B8-42A4-8790-2FA9F78070D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7518B34F-E3B8-42A4-8790-2FA9F78070D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B863A2C5-D8BE-4C5C-8D77-CCB3F0D9C69D}
+	EndGlobalSection
+EndGlobal
